@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Meet the Team</h2>
+    <ul>
+        {% for player in players %}
+            <li>
+                <img src="images/{{ player.name }}.jpg" alt="{{ player.name }}">
+                <h3>{{ player.name }}</h3>
+                <p>{{ player.role }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
