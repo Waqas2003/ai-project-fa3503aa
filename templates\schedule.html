@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Upcoming Matches</h2>
+    <ul>
+        {% for match in matches %}
+            <li>
+                <h3>{{ match.opponent }}</h3>
+                <p>{{ match.date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
